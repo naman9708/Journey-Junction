@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1homepage.css">
+</head>
+<body>
+    <div class="book">
+        <div class="container">
+            <h2>Book Your Trip</h2>
+            
+            <!-- Pickup Location Input -->
+            <div class="form-group">
+                <label for="pickup-location">Pickup Location</label>
+                <input type="text" id="pickup-location" placeholder="Enter your pickup location">
+            </div>
+            
+            <!-- Drop-off Location Input -->
+            <div class="form-group">
+                <label for="dropoff-location">Drop-off Location</label>
+                <input type="text" id="dropoff-location" placeholder="Enter your drop-off location">
+            </div>
+            
+            <!-- Vehicle Type Selection -->
+            <div class="form-group">
+                <label for="vehicle-type">Vehicle Type</label>
+                <select id="vehicle-type">
+                    <option value="bike">Bike</option>
+                    <option value="auto">Auto</option>
+                    <option value="car">Car</option>
+                    <option value="premium-car">Premium Car</option>
+                </select>
+            </div>
+        
+            <!-- Book Trip Button -->
+            <button class="book-trip-btn" onclick="bookTrip()">Book My Trip</button>
+        </div>
+        
+        <script>
+            // Function for Book Trip Button
+            function bookTrip() {
+                const pickupLocation = document.getElementById("pickup-location").value;
+                const dropoffLocation = document.getElementById("dropoff-location").value;
+                const vehicleType = document.getElementById("vehicle-type").value;
+        
+                if (pickupLocation && dropoffLocation && vehicleType) {
+                    alert(`Trip booked from ${pickupLocation} to ${dropoffLocation} with a ${vehicleType}.`);
+                } else {
+                    alert("Please fill in Pickup Location, Drop-off Location, and select a Vehicle Type.");
+                }
+            }
+        </script> 
+    </div>
+    
+</body>
+</html>
